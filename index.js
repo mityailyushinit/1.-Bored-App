@@ -1,2 +1,3 @@
 fetch("https://dog.ceo/api/breeds/image/random")
-  .then(response => console.log(response));
+  .then(response => response.json())
+  .then(res => console.log(res));
