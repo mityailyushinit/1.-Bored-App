@@ -1,13 +1,15 @@
-fetch("https://dog.ceo/api/breeds/image/random")
-  .then(data => data.json())
-  .then((res) => {
-    if(res.status !== 'success') {
-        return;
-    }
-    
-    document.querySelector('.js-img').innerHTML = `
-        <img 
-            src='${res.message}'
-            width='500'>
+const button = document.querySelector('button');
+const output = document.querySelector('.output');
+
+button.addEventListener('click', function() {
+    output.innerHTML = `
+        <p>Форсаж</p>
+    <p>Плохие парни</p>
+    <p>Неудержимые</p>
+    <p>Перевозчик</p>
+    <p>Остаться в живых</p>
+    <p>Кремнивая долина</p>
+    <p>Стражи галлактики</p>
+    <p>Сваты</p>
     `;
-  });
+});
